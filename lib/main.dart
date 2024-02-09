@@ -1,5 +1,17 @@
 import 'package:flutter/material.dart';
 
+import 'dart:convert';
+
+import 'package:dawal2/models/lettre_model.dart';
+import 'package:dawal2/onglets/apropos.dart';
+import 'package:dawal2/onglets/clavier.dart';
+import 'package:dawal2/onglets/liens/liens.dart';
+import 'package:dawal2/onglets/liste/lettres_liste.dart';
+import 'package:dawal2/themes.dart';
+import 'package:dawal2/titre.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -10,44 +22,26 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    const String appTitre = 'Transcription';
+    const Color bleu = Colors.blue;
+    //const Color vert = Colors.green;
+    //const Color ambre = Colors.amber;
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
+      title: appTitre,
+      theme: monThemeData1(context, bleu),
+      /* ThemeData(
         //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: bleu),
         useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      ), */
+      home: const MyHomePage(title: 'Wagi d awal iw'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
+  //
   final String title;
 
   @override
@@ -55,71 +49,87 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
     //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
+    return DefaultTabController(
+      length: 4,
+      child: Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: true,
+          toolbarHeight: 140,
           //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
+          backgroundColor: Theme.of(context).primaryColorDark,
           //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
+          title: const Titre(),
+          bottom: TabBar(
+            labelColor: Colors.white,
+            unselectedLabelColor: Theme.of(context).primaryColorLight,
+            tabs: const [
+              Tab(
+                icon: Icon(Icons.hdr_auto),
+                //text: 'Alphabet',
+              ),
+              Tab(
+                icon: Icon(Icons.keyboard),
+                //text: 'Clavier',
+              ),
+              Tab(
+                icon: Icon(Icons.public),
+                //text: 'Liens',
+              ),
+              Tab(
+                icon: Icon(Icons.info),
+                //text: 'A propos',
+              )
+            ],
+          ),
+        ),
+        body: TabBarView(
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
+            FutureBuilder(
+                future: _chargerRoot('assets/json/lettres.json'),
+                builder: (context, AsyncSnapshot snapshot) {
+                  if (snapshot.hasError) {
+                    if (kDebugMode) {
+                      print(snapshot.error);
+                    }
+                  }
+                  return snapshot.hasData
+                      ? LettresList(
+                    tabLettres: snapshot.data,
+                    zoom: 1,
+                  )
+                      : const CircularProgressIndicator();
+                }),
+            const Center(child: Clavier()),
+            const Center(child: Liens()),
+            const Center(child: Apropos()),
           ],
         ),
+        // This trailing comma makes auto-formatting nicer for build methods.
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+}
+
+// méthode 2 OK
+//Future<List<Photo>> _chargerRoot() async {
+Future<List<Lettre>?> _chargerRoot(String url) async {
+  String jsonString = //await rootBundle.loadString('json/photos.json');
+  //await rootBundle.loadString('https://drive.google.com/file/d/1AxJHclljcFX7b03G7B9G-QOuVDaNxlXS/view?usp=sharing');
+  await rootBundle.loadString(url);
+  //print('main: jsonString= $jsonString');
+  return convertir(jsonString);
+}
+
+/* ***** Conversion json ****** */
+List<Lettre>? convertir(String responseBody) {
+  //final parsed = jsonDecode(responseBody).cast<Map<String, dynamic>>();
+  final parsed = jsonDecode(responseBody);
+  //print('main: parsed= $parsed');
+  final parsedTab =
+  parsed.map<Lettre>((json) => Lettre.fromJson(json)).toList();
+  //print('main: parsedTab= ${parsedTab[0].prononciations[0].exemple}');
+  return parsedTab;
 }
