@@ -1,0 +1,441 @@
+[
+  {
+    "lettre": "a",
+    "lettreMaj": "A",
+    "prononciations": [
+      {"exemple" : {"texte": "aman" , "son": "a_ex.mp3"} ,
+        "son": "a.mp3",
+        "image": "a.jpg",
+        "francais": "a",
+        "arabe": "ا"}
+        ]
+  },
+  {
+    "lettre": "b",
+    "lettreMaj": "B",
+    "prononciations": [
+      {"exemple" : {"texte":  "ibibbi", "son": "b1_ex.mp3"},
+        "son": "b1.mp3",
+        "image": "b1.jpg",
+        "francais": "b",
+        "arabe": "ب"
+      },
+      {"exemple" : {"texte":  "tabexsist", "son": "b2_ex.mp3"},
+        "son": "b2.mp3",
+        "image": "b2.jpg",
+        "francais": "v",
+        "arabe": "-"
+      }
+    ]
+  },
+  {
+    "lettre": "c",
+    "lettreMaj": "C",
+    "prononciations": [
+      {"exemple" : {"texte":  "ucen", "son": "c_ex.mp3"},
+        "son": "c.mp3",
+        "image": "c.jpg",
+        "francais": "ch",
+        "arabe": "ش"
+      }
+    ]
+  },
+  {
+    "lettre": "č",
+    "lettreMaj": "Č",
+    "prononciations": [
+      {"exemple" : {"texte":  "ččina", "son": "cc_ex.mp3"},
+        "son": "cc.mp3",
+        "image": "cc.jpg",
+        "francais": "tch",
+        "arabe": "-"
+      }
+    ]
+  },
+  {
+    "lettre": "d",
+    "lettreMaj": "D",
+    "prononciations": [
+      {"exemple" : {"texte":  "taddart", "son": "d1_ex.mp3"},
+        "son": "d1.mp3",
+        "image": "d1.jpg",
+        "francais": "d",
+        "arabe": "د"
+      },
+      {"exemple" : {"texte":  "adrar", "son": "d2_ex.mp3"},
+        "son": "d2.mp3",
+        "image": "d2.jpg",
+        "francais": "dh",
+        "arabe": "ذ"
+      }
+    ]
+  },
+  {
+    "lettre": "ḍ",
+    "lettreMaj": "Ḍ",
+    "prononciations": [
+      {"exemple" : {"texte": "iḍudan", "son": "dd_ex.mp3"},
+        "son": "dd.mp3",
+        "image": "dd.jpg",
+        "francais": "-",
+        "arabe": "ض"}
+    ]
+  },
+  {
+    "lettre": "e",
+    "lettreMaj": "E",
+    "prononciations": [
+      {"exemple" : {"texte": "iles", "son": "e_ex.mp3"},
+        "son": "e.mp3",
+        "image": "e.jpg",
+        "francais": "-",
+        "arabe": "-"
+      }
+    ]
+  }
+,
+  {
+    "lettre": "f",
+    "lettreMaj": "F",
+    "prononciations": [
+      {"exemple" : {"texte": "afus", "son": "f_ex.mp3"},
+        "son": "f.mp3",
+        "image": "f.jpg",
+        "francais": "f",
+        "arabe": "ف"
+      }
+    ]
+  },
+  {
+    "lettre": "g",
+    "lettreMaj": "G",
+    "prononciations": [
+      {"exemple" : {"texte": "aggur", "son": "g1_ex.mp3"},
+        "son": "g1.mp3",
+        "image": "g1.jpg",
+        "francais": "gue",
+        "arabe": "-"
+      },
+      {"exemple" : {"texte": "agu", "son": "g2_ex.mp3"},
+        "son": "g2.mp3",
+        "image": "g2.jpg",
+        "francais": "-",
+        "arabe": "-"
+      }
+    ]
+  },
+  {
+    "lettre": "ǧ",
+    "lettreMaj": "Ǧ",
+    "prononciations": [
+      {"exemple" : {"texte": "ajeǧǧig", "son": "gg_ex.mp3"},
+        "son": "gg.mp3",
+        "image": "gg.jpg",
+        "francais": "dj",
+        "arabe": "ج"
+      }
+    ]
+  },
+  {
+    "lettre": "h",
+    "lettreMaj": "H",
+    "prononciations": [
+      {"exemple" : {"texte": "lehwa", "son": "h_ex.mp3"},
+        "son": "h.mp3",
+        "image": "h.jpg",
+        "francais": "-",
+        "arabe": "ه"
+      }
+    ]
+  },
+  {
+    "lettre": "ḥ",
+    "lettreMaj": "Ḥ",
+    "prononciations": [
+      {"exemple" : {"texte": "lḥid", "son": "hh_ex.mp3"},
+        "son": "hh.mp3",
+        "image": "hh.jpg",
+        "francais": "-",
+        "arabe": "ح"
+      }
+    ]
+  },
+  {
+    "lettre": "i",
+    "lettreMaj": "I",
+    "prononciations": [
+      {"exemple" : {"texte": "id", "son": "i_ex.mp3"},
+        "son": "i.mp3",
+        "image": "i.jpg",
+        "francais": "i",
+        "arabe": "-"
+      }
+    ]
+  },
+  {
+    "lettre": "j",
+    "lettreMaj": "J",
+    "prononciations": [
+      {"exemple" : {"texte": "ajrad", "son": "j_ex.mp3"},
+        "son": "j.mp3",
+        "image": "j.jpg",
+        "francais": "j",
+        "arabe": "-"
+      }
+    ]
+  },
+  {
+    "lettre": "k",
+    "lettreMaj": "K",
+    "prononciations": [
+      {"exemple" : {"texte": "akeṛmus", "son": "k1_ex.mp3"},
+        "son": "k1.mp3",
+        "image": "k1.jpg",
+        "francais": "k",
+        "arabe": "ك"
+      },
+      {"exemple" : {"texte": "akbal", "son": "k2_ex.mp3"},
+        "son": "k2.mp3",
+        "image": "k2.jpg",
+        "francais": "-",
+        "arabe": "-"
+      }
+    ]
+  },
+  {
+    "lettre": "l",
+    "lettreMaj": "L",
+    "prononciations": [
+      {"exemple" : {"texte": "tamellalt", "son": "l_ex.mp3"},
+        "son": "l.mp3",
+        "image": "l.jpg",
+        "francais": "l",
+        "arabe": "ل"      }
+    ]
+  },
+  {
+    "lettre": "m",
+    "lettreMaj": "M",
+    "prononciations": [
+      {"exemple" : {"texte": "alim", "son": "m_ex.mp3"},
+        "son": "m.mp3",
+        "image": "m.jpg",
+        "francais": "m",
+        "arabe": "م"
+      }
+    ]
+  },
+  {
+    "lettre": "n",
+    "lettreMaj": "N",
+    "prononciations": [
+      {"exemple" : {"texte": "allen", "son": "n_ex.mp3"},
+        "son": "n.mp3",
+        "image": "n.jpg",
+        "francais": "n",
+        "arabe": "ن"
+      }
+    ]
+  },
+  {
+    "lettre": "ɣ",
+    "lettreMaj": "Ɣ",
+    "prononciations": [
+      {"exemple" : {"texte": "aɣyul", "son": "gamma_ex.mp3"},
+        "son": "gamma.mp3",
+        "image": "gamma.jpg",
+        "francais": "r français",
+        "arabe":"غ"
+      }
+    ]
+  },
+  {
+    "lettre": "q",
+    "lettreMaj": "Q",
+    "prononciations": [
+      {"exemple" : {"texte": "aqjun", "son": "q_ex.mp3"},
+        "son": "q.mp3",
+        "image": "q.jpg",
+        "francais": "-",
+        "arabe": "ق"
+      }
+    ]
+  },
+  {
+    "lettre": "r",
+    "lettreMaj": "R",
+    "prononciations": [
+      {"exemple" : {"texte": "itran", "son": "r_ex.mp3"},
+        "son": "r.mp3",
+        "image": "r.jpg",
+        "francais": "r roulé",
+        "arabe": "ر"      }
+    ]
+  },
+  {
+    "lettre": "ṛ",
+    "lettreMaj": "Ṛ",
+    "prononciations": [
+      {"exemple" : {"texte": "aqeṛṛuy", "son": "rr_ex.mp3"},
+        "son": "rr.mp3",
+        "image": "rr.jpg",
+        "francais": "r très roulé",
+        "arabe": "رّ"     }
+    ]
+  },
+  {
+    "lettre": "s",
+    "lettreMaj": "S",
+    "prononciations": [
+      {"exemple" : {"texte": "seksu", "son": "s_ex.mp3"},
+        "son": "s.mp3",
+        "image": "s.jpg",
+        "francais": "s",
+        "arabe": "س"
+      }
+    ]
+  },
+  {
+    "lettre": "ṣ",
+    "lettreMaj": "Ṣ",
+    "prononciations": [
+      {"exemple" : {"texte": "aṣebbaḍ", "son": "ss_ex.mp3"},
+        "son": "ss.mp3",
+        "image": "ss.jpg",
+        "francais": "-",
+        "arabe": "ص"
+      }
+    ]
+  },
+  {
+    "lettre": "t",
+    "lettreMaj": "T",
+    "prononciations": [
+      {"exemple" : {"texte": "tamtunt", "son": "t1_ex.mp3"},
+        "son": "t1.mp3",
+        "image": "t1.jpg",
+        "francais": "t",
+        "arabe": "ت"
+      },
+      {"exemple" : {"texte": "times", "son": "t2_ex.mp3"},
+        "son": "t2.mp3",
+        "image": "t2.jpg",
+        "francais": "-",
+        "arabe": "ث"}
+    ]
+  },
+  {
+    "lettre": "ṭ",
+    "lettreMaj": "Ṭ",
+    "prononciations": [
+      {"exemple" : {"texte": "iṭij", "son": "tt_ex.mp3"},
+        "son": "tt.mp3",
+        "image": "tt.jpg",
+        "francais": "-",
+        "arabe": "ط"
+      }
+    ]
+  },
+  {
+    "lettre": "ţ",
+    "lettreMaj": "Ţ",
+    "prononciations": [
+      {"exemple" : {"texte": "tabuftaţ", "son": "ttt_ex.mp3"},
+        "son": "ttt.mp3",
+        "image": "ttt.jpg",
+        "francais": "ts",
+        "arabe": "-"
+      }
+    ]
+  },
+  {
+    "lettre": "u",
+    "lettreMaj": "U",
+    "prononciations": [
+      {"exemple" : {"texte": "ul", "son": "u1_ex.mp3"},
+        "son": "u1.mp3",
+        "image": "u1.jpg",
+        "francais": "ou",
+        "arabe": "-"
+      },
+      {"exemple" : {"texte": "aḍu", "son": "u2_ex.mp3"},
+        "son": "u2.mp3",
+        "image": "u2.jpg",
+        "francais": "o",
+        "arabe": "-"
+      }
+    ]
+  },
+  {
+    "lettre": "w",
+    "lettreMaj": "W",
+    "prononciations": [
+      {"exemple" : {"texte": "awren", "son": "w_ex.mp3"},
+        "son": "w.mp3",
+        "image": "w.jpg",
+        "francais": "-",
+        "arabe": "و"
+      }
+    ]
+  },
+  {
+    "lettre": "x",
+    "lettreMaj": "X",
+    "prononciations": [
+      {"exemple" : {"texte": "axxam", "son": "x_ex.mp3"},
+        "son": "x.mp3",
+        "image": "x.jpg",
+        "francais": "-",
+        "arabe": "خ"
+      }
+    ]
+  },
+  {
+    "lettre": "y",
+    "lettreMaj": "Y",
+    "prononciations": [
+      {"exemple" : {"texte": "yiwen", "son": "y_ex.mp3"},
+        "son": "y.mp3",
+        "image": "y.jpg",
+        "francais": "-",
+        "arabe": "ى"
+      }
+    ]
+  },
+  {
+    "lettre": "z",
+    "lettreMaj": "Z",
+    "prononciations": [
+      {"exemple" : {"texte": "azemmur", "son": "z_ex.mp3"},
+        "son": "z.mp3",
+        "image": "z.jpg",
+        "francais": "z",
+        "arabe": "ز"
+      }
+    ]
+  },
+  {
+    "lettre": "ẓ",
+    "lettreMaj": "Ẓ",
+    "prononciations": [
+      {"exemple" : {"texte": "aẓeṭṭa", "son": "zz_ex.mp3"},
+        "son": "zz.mp3",
+        "image": "zz.jpg",
+        "francais": "",
+        "arabe": "-"
+      }
+    ]
+  },
+  {
+    "lettre": "ε",
+    "lettreMaj": "Ɛ",
+    "prononciations": [
+      {"exemple" : {"texte":  "aεrur", "son": "epsilon_ex.mp3"},
+        "son": "epsilon.mp3",
+        "image": "epsilon.jpg",
+        "francais": "-",
+        "arabe": "ع"
+      }
+    ]
+  }
+]
