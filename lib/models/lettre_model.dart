@@ -1,4 +1,4 @@
-import 'package:dawal/models/prononciation_model.dart';
+import 'package:dawal2/models/prononciation_model.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 /// Ceci permet à la classe `User` d'accéder aux membres privés dans
