@@ -28,8 +28,10 @@ Widget laListe(BuildContext context, tabLettres, zoom) {
             ? couleurFond = couleurFondClair
             : couleurFond = couleurFondFonce;
         return Container(
-            padding: const EdgeInsets.symmetric(vertical: 2.0),
+           //padding: const EdgeInsets.symmetric(vertical: 2.0),
+            margin: const EdgeInsets.symmetric(vertical: 2,horizontal: 2),
             color: couleurFond,
+            //width: 20,
             child: Row(
               children: [
                 afficheLettre(context, tabLettres[index].lettreMaj, zoom * 1.2),
@@ -55,14 +57,12 @@ Widget afficheLettre(BuildContext context, String? lalettre, double taille) {
     margin: const EdgeInsets.all(1.0),
     alignment: Alignment.center,
     width: 28.0,
-    child: // Expanded( child:
-        Text(
+    child: Text(
       '$lalettre',
       style: Theme.of(context).textTheme.bodyMedium,
       //textScaleFactor: taille,
       textScaler: TextScaler.linear(taille),
     ),
-    //)
   );
 }
 
@@ -84,7 +84,7 @@ Widget details(BuildContext context, lettreDef, index) {
       IconButton(
         alignment: Alignment.centerRight,
         // icon: const Icon(Icons.more_horiz_rounded),
-        icon: const Icon(Icons.arrow_right),
+        icon: const Icon(Icons.arrow_right,size: 50, semanticLabel: 'button'),
         //color: Colors.lightGreen,
         color: Theme.of(context).primaryColor,
         // hoverColor: Colors.red,

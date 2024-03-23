@@ -14,9 +14,10 @@ class Titre extends StatelessWidget {
             'assets/images/africa-north-transparent.png',
             width: 60,
             color: Theme.of(context).primaryColorLight,
+            semanticLabel: 'label',
             // height: 52,
           ),
-          Text.rich(
+          Text.rich(semanticsLabel: 'label',
             //style: Theme.of(context).textTheme.headline1,
             TextSpan(
               style: Theme.of(context).textTheme.displayLarge,
@@ -27,7 +28,7 @@ class Titre extends StatelessWidget {
                       //color: Color.fromRGBO(205, 1, 51, 1.0),
                       fontSize: 24,
                       fontStyle: FontStyle.italic,
-                      letterSpacing: 1),
+                      letterSpacing: 1.3),
                 ),
               ],
             ),
@@ -35,12 +36,13 @@ class Titre extends StatelessWidget {
         ],
       ),
       const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Text.rich(
+        Text.rich(semanticsLabel: 'label',
           TextSpan(children: <TextSpan>[
             TextSpan(
               text: ' Aru Tamazi\$t -',
               style: TextStyle(
                 fontFamily: 'Amazigh tms',
+                fontSize: 18,
                 //fontFamily: 'Gelio Greek Diner',
                 //color: Color.fromRGBO(230, 230, 1, 1.0)
               ),
@@ -50,7 +52,7 @@ class Titre extends StatelessWidget {
               text: ' Ecrire Berbère',
               style: TextStyle(
                 fontFamily: 'Times New Roman',
-                fontSize: 16,
+                fontSize: 14,
                 //color: Color.fromRGBO(230, 230, 1, 1.0)
               ),
             ),
@@ -62,7 +64,7 @@ class Titre extends StatelessWidget {
         'En tamazight, toutes les lettres se prononcent.',
         style: TextStyle(
           fontFamily: 'Times New Roman',
-          fontSize: 13,
+          fontSize: 10,
           fontStyle: FontStyle.italic,
           color: Colors.black54,
           //color: Color.fromRGBO(230, 230, 1, 1.0)

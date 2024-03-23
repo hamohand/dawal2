@@ -32,17 +32,17 @@ class Clavier extends StatelessWidget {
 Widget widgetAndroid(context) {
   final List<Widget> tab = [
     ListTile(
-        leading: const Icon(Icons.android, color: Colors.blue),
+        leading: const Icon(Icons.android, color: Colors.blue,semanticLabel: 'label'),
         title: Text(
           'Android',
           style: Theme.of(context).textTheme.displaySmall,
         )),
     const ListTile(
-        leading: Icon(Icons.settings),
+        leading: Icon(Icons.settings,semanticLabel: 'label'),
         title: Text('Langue et clavier - Langue - Ajout d\'une langue')),
     const ListTile(
         leading: Icon(
-          Icons.more_vert_rounded,
+          Icons.more_vert_rounded,semanticLabel: 'label',
         ),
         title: Text('Toutes les langues')),
     const ListTile(
@@ -57,7 +57,7 @@ Widget widgetAndroid(context) {
 Widget widgetWindow(context) {
   final List<Widget> tab = [
     ListTile(
-        leading: const Icon(Icons.window, color: Colors.blue),
+        leading: const Icon(Icons.window, color: Colors.blue,semanticLabel: 'label'),
         title: Text(
           'Windows',
           style: Theme.of(context).textTheme.displaySmall,
@@ -78,13 +78,13 @@ Widget widgetWindow(context) {
 Widget widgetIphone(context) {
   final List<Widget> tab = [
     ListTile(
-        leading: const Icon(Icons.phone_iphone, color: Colors.blue),
+        leading: const Icon(Icons.phone_iphone, color: Colors.blue,semanticLabel: 'label'),
         title: Text(
           'Iphone',
           style: Theme.of(context).textTheme.displaySmall,
         )),
     const ListTile(
-        leading: Icon(Icons.youtube_searched_for), title: Text('à suivre')),
+        leading: Icon(Icons.youtube_searched_for,semanticLabel: 'label'), title: Text('à suivre')),
   ];
   return Column(children: tab);
 }

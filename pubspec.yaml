@@ -1,7 +1,7 @@
 name: dawal2
 description: "Dawal version Android studio 20240209."
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-version: 1.0.0+1
+version: 1.0.0+5
 #
 environment:
   sdk: '>=3.2.6 <4.0.0'

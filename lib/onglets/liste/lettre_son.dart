@@ -50,10 +50,11 @@ class MyHomePageState extends State<SonLettre> {
       child: Center(
         child: IconButton(
           // icon: const Icon(Icons.record_voice_over),
-          icon: const Icon(Icons.music_note),
+          icon: const Icon(Icons.music_note, semanticLabel: 'button'),
           //color: Colors.lightGreen,
           color: Theme.of(context).primaryColor,
           // hoverColor: Colors.red,
+          iconSize: 35,
           onPressed: () {
             lire(fichierSon);
           },

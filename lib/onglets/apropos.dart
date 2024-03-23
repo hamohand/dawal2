@@ -22,7 +22,7 @@ class Apropos extends StatelessWidget {
 //Widget regledor(context) {
   Widget build(BuildContext context) {
     return Card(
-        margin: const EdgeInsets.all(10),
+        margin: const EdgeInsets.all(15),
         //color: Colors.tealAccent[100],
         //shadowColor: Colors.blueGrey.shade50,
         elevation: 10,
@@ -72,6 +72,7 @@ class Apropos extends StatelessWidget {
           ),
         ),*/
           Text.rich(// vide
+              semanticsLabel: 'label',
               TextSpan(
                   style: Theme.of(context).textTheme.bodyLarge,
                   children: const <TextSpan>[
@@ -80,10 +81,16 @@ class Apropos extends StatelessWidget {
                 ),
                 TextSpan(
                     text:
-                        'WagiDAWALiw est un outil d\'aide à portée de main, simple et pratique dédié à la transcription en tamazight, à mettre entre toutes les mains. Il s\'adresse essentiellement à un public berbérophone désirant franchir le pas pour enfin écrire en tamazight. Une application évolutive grâce au concours des membres de notre groupe.',
+                        'WagiDAWALiw est un outil d\'aide à portée de main, '
+                            'simple et pratique dédié à la transcription en tamazight, '
+                            'à mettre entre toutes les mains. Il s\'adresse essentiellement '
+                            'à un public berbérophone désirant écrire en tamazight. Une application évolutive '
+                            'grâce au concours des membres de notre groupe. '
+                            'Notre principal source est le dictionnaire Dallet (voir les liens)',
                     style: TextStyle(fontSize: 10.0)),
               ])),
-          Text.rich(TextSpan(
+          Text.rich(semanticsLabel: 'label',
+              TextSpan(
               style: Theme.of(context).textTheme.bodyLarge,
               children: const [
                 TextSpan(

@@ -23,12 +23,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const String appTitre = 'Transcription';
-    const Color bleu = Colors.blue;
+    //const Color bleu = Colors.blue;
     //const Color vert = Colors.green;
-    //const Color ambre = Colors.amber;
+    const Color ambre = Colors.amber;
     return MaterialApp(
       title: appTitre,
-      theme: monThemeData1(context, bleu),
+      theme: monThemeData1(context, ambre),
       /* ThemeData(
         //
         colorScheme: ColorScheme.fromSeed(seedColor: bleu),
@@ -51,35 +51,34 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    //
     return DefaultTabController(
       length: 4,
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: true,
-          toolbarHeight: 140,
-          //
+          toolbarHeight: 90,
           backgroundColor: Theme.of(context).primaryColorDark,
           //
           title: const Titre(),
           bottom: TabBar(
             labelColor: Colors.white,
             unselectedLabelColor: Theme.of(context).primaryColorLight,
+            //indicatorWeight: 20.0,
             tabs: const [
               Tab(
-                icon: Icon(Icons.hdr_auto),
+                icon: Icon(Icons.hdr_auto,semanticLabel: 'label'),
                 //text: 'Alphabet',
               ),
               Tab(
-                icon: Icon(Icons.keyboard),
+                icon: Icon(Icons.keyboard,semanticLabel: 'label'),
                 //text: 'Clavier',
               ),
               Tab(
-                icon: Icon(Icons.public),
+                icon: Icon(Icons.public,semanticLabel: 'label'),
                 //text: 'Liens',
               ),
               Tab(
-                icon: Icon(Icons.info),
+                icon: Icon(Icons.info,semanticLabel: 'label'),
                 //text: 'A propos',
               )
             ],

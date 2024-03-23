@@ -30,7 +30,7 @@ class Liens extends StatelessWidget {
 Widget widgetWeb(context) {
   final List<Widget> tab = [
     ListTile(
-        leading: Icon(Icons.web, color: Theme.of(context).primaryColor),
+        leading: Icon(Icons.web, color: Theme.of(context).primaryColor,semanticLabel: 'label'),
         title: Text(
           'Sites Web :',
           style: Theme.of(context).textTheme.displaySmall,
@@ -65,7 +65,7 @@ Widget widgetAppli(context) {
   final List<Widget> tab = [
     ListTile(
         leading:
-            Icon(Icons.apps_outlined, color: Theme.of(context).primaryColor),
+            Icon(Icons.apps_outlined, color: Theme.of(context).primaryColor, semanticLabel: 'label'),
         title: Text(
           'Applications Play Store :',
           style: Theme.of(context).textTheme.displaySmall,

@@ -244,7 +244,7 @@
       {"exemple" : {"texte": "aɣyul", "son": "gamma_ex.mp3"},
         "son": "gamma.mp3",
         "image": "gamma.jpg",
-        "francais": "r français",
+        "francais": "r non roulé",
         "arabe":"غ"
       }
     ]

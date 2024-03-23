@@ -75,7 +75,7 @@ Widget afficheExemple(BuildContext context, String? texteExemple,
     ),
     margin: const EdgeInsets.all(3.0),
     alignment: Alignment.centerLeft,
-    width: 120.0,
+    width: 100.0,
     child: Text(
       '$texteExemple',
       style: styleTexteTheme, //Theme.of(context).textTheme.bodyText1,
