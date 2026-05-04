@@ -25,7 +25,7 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^4.0.0
   ######## fait le 20240209 ############
-  flutter_launcher_icons: ^0.13.1
+  flutter_launcher_icons: ^0.14.3
   # json
   build_runner: ^2.4.11
   json_serializable: ^6.8.0
