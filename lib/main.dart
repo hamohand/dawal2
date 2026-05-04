@@ -19,21 +19,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     const String appTitre = 'Transcription';
-    //const Color bleu = Colors.blue;
-    //const Color vert = Colors.green;
     const Color ambre = Colors.amber;
     return MaterialApp(
       title: appTitre,
       theme: monThemeData1(context, ambre),
-      /* ThemeData(
-        //
-        colorScheme: ColorScheme.fromSeed(seedColor: bleu),
-        useMaterial3: true,
-      ), */
       home: const MyHomePage(title: 'Wagi d awal iw'),
     );
   }
@@ -41,7 +33,6 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
-  //
   final String title;
 
   @override
@@ -57,30 +48,13 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           automaticallyImplyLeading: true,
           toolbarHeight: 90,
-          backgroundColor: Theme.of(context).primaryColorDark,
-          //
           title: const Titre(),
-          bottom: TabBar(
-            labelColor: Colors.white,
-            unselectedLabelColor: Theme.of(context).primaryColorLight,
-            //indicatorWeight: 20.0,
-            tabs: const [
-              Tab(
-                icon: Icon(Icons.hdr_auto,semanticLabel: 'label'),
-                //text: 'Alphabet',
-              ),
-              Tab(
-                icon: Icon(Icons.keyboard,semanticLabel: 'label'),
-                //text: 'Clavier',
-              ),
-              Tab(
-                icon: Icon(Icons.public,semanticLabel: 'label'),
-                //text: 'Liens',
-              ),
-              Tab(
-                icon: Icon(Icons.info,semanticLabel: 'label'),
-                //text: 'A propos',
-              )
+          bottom: const TabBar(
+            tabs: [
+              Tab(icon: Icon(Icons.hdr_auto, semanticLabel: 'Alphabet')),
+              Tab(icon: Icon(Icons.keyboard, semanticLabel: 'Clavier')),
+              Tab(icon: Icon(Icons.public, semanticLabel: 'Liens')),
+              Tab(icon: Icon(Icons.info, semanticLabel: 'A propos')),
             ],
           ),
         ),

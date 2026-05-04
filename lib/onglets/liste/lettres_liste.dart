@@ -16,32 +16,30 @@ class LettresList extends StatelessWidget {
 }
 
 Widget laListe(BuildContext context, tabLettres, zoom) {
-  Color? couleurFondClair = Theme.of(context).primaryColorLight;
-  Color? couleurFondFonce = Theme.of(context).colorScheme.background;
-  Color? couleurFond = couleurFondFonce; // initialisée à foncé
-  //
   return ListView.builder(
-      padding: const EdgeInsets.all(2),
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
       itemCount: tabLettres.length,
-      itemBuilder: (BuildContext context, int? index) {
-        (couleurFond == couleurFondFonce)
-            ? couleurFond = couleurFondClair
-            : couleurFond = couleurFondFonce;
-        return Container(
-           //padding: const EdgeInsets.symmetric(vertical: 2.0),
-            margin: const EdgeInsets.symmetric(vertical: 2,horizontal: 2),
-            color: couleurFond,
-            //width: 20,
-            child: Row(
-              children: [
-                afficheLettre(context, tabLettres[index].lettreMaj, zoom * 1.2),
-                afficheLettre(context, tabLettres[index].lettre, zoom * 1.2),
-                LettrePrononciations(
-                    lettreDef: tabLettres[index],
-                    couleurFond: couleurFond,
-                    zoom: zoom),
-                details(context, tabLettres[index], index),
-              ],
+      itemBuilder: (BuildContext context, int index) {
+        return Card(
+            elevation: 1,
+            margin: const EdgeInsets.symmetric(vertical: 4, horizontal: 0),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
+              child: Row(
+                children: [
+                  afficheLettre(context, tabLettres[index].lettreMaj, zoom * 1.2),
+                  const SizedBox(width: 4),
+                  afficheLettre(context, tabLettres[index].lettre, zoom * 1.2),
+                  const SizedBox(width: 8),
+                  LettrePrononciations(
+                      lettreDef: tabLettres[index],
+                      couleurFond: Colors.transparent,
+                      zoom: zoom),
+                  const Spacer(),
+                  details(context, tabLettres[index], index),
+                ],
+              ),
             ));
       });
 }
@@ -50,17 +48,17 @@ Widget laListe(BuildContext context, tabLettres, zoom) {
 Widget afficheLettre(BuildContext context, String? lalettre, double taille) {
   return Container(
     decoration: BoxDecoration(
-        color: Colors.transparent,
-        border:
-            Border.all(width: 0.5, color: Theme.of(context).primaryColorDark),
-        borderRadius: const BorderRadius.all(Radius.circular((18)))),
-    margin: const EdgeInsets.all(1.0),
+        color: Theme.of(context).colorScheme.primaryContainer,
+        borderRadius: const BorderRadius.all(Radius.circular(8))),
     alignment: Alignment.center,
-    width: 28.0,
+    width: 36.0,
+    height: 36.0,
     child: Text(
       '$lalettre',
-      style: Theme.of(context).textTheme.bodyMedium,
-      //textScaleFactor: taille,
+      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+            color: Theme.of(context).colorScheme.onPrimaryContainer,
+            fontWeight: FontWeight.bold,
+          ),
       textScaler: TextScaler.linear(taille),
     ),
   );

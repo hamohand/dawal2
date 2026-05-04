@@ -9,25 +9,33 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.8
   # Liens
-  url_launcher: ^6.2.4
+  url_launcher: ^6.3.0
   # json
-  json_annotation: ^4.8.1
+  json_annotation: ^4.9.0
   # Audio
-  just_audio: ^0.9.36
+  just_audio: ^0.9.38
+  # HTTP
+  http: ^1.2.1
 
 ###
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.1
+  flutter_lints: ^4.0.0
   ######## fait le 20240209 ############
   flutter_launcher_icons: ^0.13.1
-  http: ^1.2.0
   # json
-  build_runner: ^2.4.8
-  json_serializable: ^6.7.1
+  build_runner: ^2.4.11
+  json_serializable: ^6.8.0
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_icon.png"
+  min_sdk_android: 21
+
 #
 flutter:
   uses-material-design: true
