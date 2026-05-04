@@ -31,6 +31,9 @@ Widget laListe(BuildContext context, tabLettres, zoom) {
                   afficheLettre(context, tabLettres[index].lettreMaj, zoom * 1.2),
                   const SizedBox(width: 4),
                   afficheLettre(context, tabLettres[index].lettre, zoom * 1.2),
+                  const SizedBox(width: 4),
+                  if (tabLettres[index].lettreTifinagh != null)
+                    afficheLettreTifinagh(context, tabLettres[index].lettreTifinagh, zoom * 1.2),
                   const SizedBox(width: 8),
                   LettrePrononciations(
                       lettreDef: tabLettres[index],
@@ -60,6 +63,26 @@ Widget afficheLettre(BuildContext context, String? lalettre, double taille) {
             fontWeight: FontWeight.bold,
           ),
       textScaler: TextScaler.linear(taille),
+    ),
+  );
+}
+
+/* */
+Widget afficheLettreTifinagh(BuildContext context, String? lalettre, double taille) {
+  return Container(
+    decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.secondaryContainer,
+        borderRadius: const BorderRadius.all(Radius.circular(8))),
+    alignment: Alignment.center,
+    width: 36.0,
+    height: 36.0,
+    child: Text(
+      '$lalettre',
+      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+            color: Theme.of(context).colorScheme.onSecondaryContainer,
+            fontWeight: FontWeight.bold,
+          ),
+      textScaler: TextScaler.linear(taille * 1.1),
     ),
   );
 }

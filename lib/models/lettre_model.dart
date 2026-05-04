@@ -13,11 +13,13 @@ part 'lettre_model.g.dart';
 class Lettre {
   final String? lettre;
   final String? lettreMaj;
+  final String? lettreTifinagh;
   final List<Prononciation>? prononciations;
 
   Lettre(
     this.lettre,
     this.lettreMaj,
+    this.lettreTifinagh,
     this.prononciations,
   );
 

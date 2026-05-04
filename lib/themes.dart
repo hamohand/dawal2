@@ -19,12 +19,12 @@ ThemeData monThemeData1(BuildContext context, Color couleur) {
       centerTitle: true,
       elevation: 0,
     ),
-    tabBarTheme: TabBarTheme(
+    tabBarTheme: TabBarThemeData(
       labelColor: colorScheme.primary,
       unselectedLabelColor: colorScheme.onSurfaceVariant,
       indicatorColor: colorScheme.primary,
     ),
-    cardTheme: CardTheme(
+    cardTheme: CardThemeData(
       elevation: 2,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
