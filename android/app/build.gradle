@@ -32,12 +32,18 @@ if (keystorePropertiesFile.exists()) {
 android {
     namespace "com.ayegger.dawal2"
     //compileSdkVersion flutter.compileSdkVersion
-    compileSdk 34
-    ndkVersion flutter.ndkVersion
+    compileSdk 36
+    ndkVersion "26.1.10909125"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        jniLibs {
+            keepDebugSymbols += ['**/*.so']
+        }
     }
 
     kotlinOptions {
@@ -73,7 +79,9 @@ android {
     }
     buildTypes {
         release {
-            signingConfig signingConfigs.release
+            if (keystorePropertiesFile.exists()) {
+                signingConfig signingConfigs.release
+            }
             debuggable false
             ndk {
                 debugSymbolLevel 'SYMBOL_TABLE'
@@ -93,5 +101,4 @@ flutter {
 dependencies {
     //classpath 'com.android.tools.build:gradle:8.2.2'
     implementation 'com.google.android.material:material:1.11.0'
-
 }
